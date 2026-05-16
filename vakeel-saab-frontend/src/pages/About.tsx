@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { Zap, Users, Shield, Sparkles, Rocket, BookOpen } from "lucide-react"
+import { Zap, Sparkles, Rocket, BookOpen, MessageSquare } from "lucide-react"
 import Navbar from "../components/Navbar"
 import BackgroundGlow from "../components/BackgroundGlow"
 
@@ -30,7 +30,6 @@ export default function About() {
       <Navbar />
 
       <div className="max-w-4xl mx-auto px-6 py-20">
-        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -46,14 +45,12 @@ export default function About() {
           </p>
         </motion.div>
 
-        {/* Main Content */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
           className="space-y-12"
         >
-          {/* What We Do */}
           <motion.section variants={itemVariants} className="space-y-4">
             <h2 className="text-3xl font-bold text-white mb-6">What VakeelSaab Does</h2>
             <p className="text-gray-300 leading-relaxed">
@@ -63,7 +60,7 @@ export default function About() {
             
             <div className="grid md:grid-cols-3 gap-4 mt-8">
               <div className="border border-white/10 bg-white/5 backdrop-blur-xl rounded-xl p-6 hover:border-indigo-500/40 transition">
-                <MessageSquareIcon className="text-indigo-400 mb-4" size={28} />
+                <MessageSquare className="text-indigo-400 mb-4" size={28} />
                 <h3 className="font-semibold text-white mb-2">Ask Questions</h3>
                 <p className="text-sm text-gray-400">Ask legal questions in natural language</p>
               </div>
@@ -82,7 +79,6 @@ export default function About() {
             </div>
           </motion.section>
 
-          {/* Mission */}
           <motion.section variants={itemVariants} className="space-y-4">
             <h2 className="text-3xl font-bold text-white mb-6">Our Mission</h2>
             <div className="border-l-4 border-indigo-500 pl-6 py-2">
@@ -93,7 +89,6 @@ export default function About() {
             </div>
           </motion.section>
 
-          {/* How It Works */}
           <motion.section variants={itemVariants} className="space-y-4">
             <h2 className="text-3xl font-bold text-white mb-6">How It Works</h2>
             <div className="space-y-4">
@@ -129,7 +124,6 @@ export default function About() {
             </div>
           </motion.section>
 
-          {/* Technology Stack */}
           <motion.section variants={itemVariants} className="space-y-4">
             <h2 className="text-3xl font-bold text-white mb-6">Technology Stack</h2>
             <div className="grid md:grid-cols-2 gap-3">
@@ -153,7 +147,6 @@ export default function About() {
             </div>
           </motion.section>
 
-          {/* Vision */}
           <motion.section variants={itemVariants} className="space-y-4">
             <h2 className="text-3xl font-bold text-white mb-6">Our Vision</h2>
             <div className="border border-indigo-500/30 bg-gradient-to-r from-indigo-500/10 to-blue-500/10 backdrop-blur-xl rounded-2xl p-8">
@@ -169,25 +162,5 @@ export default function About() {
         </motion.div>
       </div>
     </div>
-  )
-}
-
-// Icon component for message square
-function MessageSquareIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      {...props}
-    >
-      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-    </svg>
   )
 }

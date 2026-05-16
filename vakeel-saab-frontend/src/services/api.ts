@@ -111,5 +111,5 @@ export async function fetchQueryHistory(token: string): Promise<QueryRecord[]> {
   return request<QueryRecord[]>("/queries", {
     method: "GET",
     token,
-  });
+  });  
 }

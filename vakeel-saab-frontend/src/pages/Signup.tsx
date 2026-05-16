@@ -47,7 +47,6 @@ export default function Signup() {
         "
       >
 
-        {/* Logo */}
         <div className="flex items-center gap-3 mb-6">
           <div className="p-2 rounded-xl bg-linear-to-r from-indigo-500 to-blue-500">
             <Scale className="text-white" size={20}/>

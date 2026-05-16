@@ -1,5 +1,5 @@
 import { MessageSquare, Upload, BookOpen, Rocket, type LucideIcon } from "lucide-react"
-import { useNavigate } from "react-router" // Or "react-router-dom" depending on your version
+import { useNavigate } from "react-router"
 import { motion } from "framer-motion"
 
 interface CardProps {

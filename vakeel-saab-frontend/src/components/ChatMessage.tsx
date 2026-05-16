@@ -39,23 +39,16 @@ export default function ChatMessage({ role, content }: Props) {
         )}
 
         {isUser ? (
-          // User messages are usually plain text, so we keep it simple
           <p className="whitespace-pre-wrap">{content}</p>
         ) : (
-          // AI messages run through the Markdown parser with custom Tailwind styling
           <div className="markdown-body overflow-hidden">
             <ReactMarkdown
               remarkPlugins={[remarkGfm]}
               components={{
-                // Style paragraphs
                 p: ({ node, ...props }) => <p className="mb-3 last:mb-0" {...props} />,
-                // Style bold text
                 strong: ({ node, ...props }) => <strong className="font-semibold text-white" {...props} />,
-                // Style bullet lists
                 ul: ({ node, ...props }) => <ul className="list-disc ml-5 mb-3 space-y-1" {...props} />,
-                // Style numbered lists
                 ol: ({ node, ...props }) => <ol className="list-decimal ml-5 mb-3 space-y-1" {...props} />,
-                // Style tables to look like beautiful dark-mode data grids
                 table: ({ node, ...props }) => (
                   <div className="overflow-x-auto my-4 border border-white/10 rounded-lg">
                     <table className="min-w-full divide-y divide-white/10 text-sm text-left" {...props} />
@@ -64,7 +57,6 @@ export default function ChatMessage({ role, content }: Props) {
                 thead: ({ node, ...props }) => <thead className="bg-white/5" {...props} />,
                 th: ({ node, ...props }) => <th className="px-4 py-2 font-medium text-gray-300 tracking-wider" {...props} />,
                 td: ({ node, ...props }) => <td className="px-4 py-2 text-gray-300 border-t border-white/5" {...props} />,
-                // Style links if Gemini provides any
                 a: ({ node, ...props }) => <a className="text-indigo-400 hover:text-indigo-300 underline underline-offset-2" {...props} />,
               }}
             >

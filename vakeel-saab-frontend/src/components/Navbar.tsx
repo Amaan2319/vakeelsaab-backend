@@ -12,7 +12,6 @@ export default function Navbar() {
     <nav className="w-full border-b border-white/10 bg-black/40 backdrop-blur-md">
       <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
 
-        {/* Logo */}
         <div className="flex items-center gap-3">
           <div className="p-2 rounded-xl bg-gradient-to-r from-indigo-500 to-blue-500">
             <Scale className="text-white" size={20} />
@@ -28,7 +27,6 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-4">
           <Link
             to="/"
@@ -50,7 +48,6 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Desktop Auth Buttons */}
         <div className="hidden md:flex items-center gap-3">
           {isAuthenticated ? (
             <>
@@ -80,7 +77,6 @@ export default function Navbar() {
           )}
         </div>
 
-        {/* Mobile Menu Button */}
         <button
           className="md:hidden text-white"
           onClick={() => setIsOpen(!isOpen)}
@@ -89,7 +85,6 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden px-6 pb-4 flex flex-col gap-3 border-t border-white/10">
 

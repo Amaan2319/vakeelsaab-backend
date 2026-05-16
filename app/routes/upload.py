@@ -59,7 +59,6 @@ async def upload_document(
             summary=document_record.summary,
         )
     except Exception as exc:
-        # Clean up the saved file if it exists
         if 'saved_path' in locals() and saved_path.exists():
             saved_path.unlink()
         raise

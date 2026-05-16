@@ -50,7 +50,6 @@ export default function Login() {
         "
       >
 
-        {/* Logo */}
         <div className="flex items-center gap-3 mb-6">
           <div className="p-2 rounded-xl bg-gradient-to-r from-indigo-500 to-blue-500">
             <Scale className="text-white" size={20}/>
@@ -119,7 +118,6 @@ export default function Login() {
           </button>
         </form>
 
-        {/* Footer */}
         <p className="text-gray-400 text-sm mt-6 text-center">
           Don't have an account?{" "}
           <Link

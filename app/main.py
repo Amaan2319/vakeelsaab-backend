@@ -10,6 +10,7 @@ from starlette import status
 from app.core.config import get_settings
 from app.core.exceptions import AppException
 from app.db.base import Base
+from app import models  # noqa: F401
 from app.db.session import engine
 from app.routes.ask import router as ask_router
 from app.routes.auth import router as auth_router
@@ -64,7 +65,7 @@ async def validation_exception_handler(_: Request, exc: RequestValidationError) 
 
 @app.exception_handler(Exception)
 async def unhandled_exception_handler(_: Request, exc: Exception) -> JSONResponse:
-    traceback.print_exc()  # 👈 THIS IS CRUCIAL
+    traceback.print_exc()
 
     return JSONResponse(
         status_code=500,

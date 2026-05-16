@@ -19,7 +19,6 @@ export default function DocumentAnalysis() {
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
-  // Auto-scroll to bottom when new messages appear
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, isLoading]);
@@ -59,7 +58,6 @@ export default function DocumentAnalysis() {
       return;
     }
 
-    // 1. Add user message to UI immediately
     const newUserMsg: Message = { id: Date.now().toString(), role: "user", content: query };
     setMessages(prev => [...prev, newUserMsg]);
     setIsLoading(true);

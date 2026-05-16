@@ -67,7 +67,6 @@ export default function UploadBox() {
         "
       >
 
-      {/* Icon */}
       <div className="
         inline-flex
         p-4
@@ -78,12 +77,10 @@ export default function UploadBox() {
         <UploadCloud className="text-indigo-400" size={32} />
       </div>
 
-      {/* Title */}
       <h3 className="text-lg font-semibold text-white">
         Upload Legal Document
       </h3>
 
-      {/* Description */}
       <p className="text-gray-400 text-sm mt-2 max-w-sm mx-auto">
         Upload a notice, FIR, or legal document to analyze
         using Vakeel Sahab AI.
@@ -95,7 +92,6 @@ export default function UploadBox() {
         </p>
       )}
 
-      {/* Hidden Input */}
       <input
         type="file"
         id="fileUpload"
@@ -104,7 +100,6 @@ export default function UploadBox() {
         onChange={handleFileChange}
       />
 
-      {/* Upload Button */}
       <label
         htmlFor="fileUpload"
         className="
@@ -127,7 +122,6 @@ export default function UploadBox() {
         {isUploading ? 'Uploading...' : 'Choose File'}
       </label>
 
-      {/* Helper text */}
       <p className="text-xs text-gray-500 mt-4">
         Supported formats: JPG, PNG, PDF, DOCX, TXT
       </p>

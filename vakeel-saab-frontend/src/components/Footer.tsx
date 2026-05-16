@@ -6,10 +6,8 @@ export default function Footer() {
     <footer className="w-full border-t border-white/10 bg-black/40 backdrop-blur-md mt-10">
       <div className="max-w-6xl mx-auto px-6 py-10">
 
-        {/* Top Section */}
         <div className="flex flex-col md:flex-row justify-between gap-8">
 
-          {/* Brand */}
           <div className="max-w-sm">
             <div className="flex items-center gap-3 mb-3">
               <div className="p-2 rounded-xl bg-gradient-to-r from-indigo-500 to-blue-500">
@@ -26,10 +24,8 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Links */}
           <div className="flex flex-col sm:flex-row gap-8">
 
-            {/* Navigation */}
             <div>
               <h3 className="text-white text-sm font-semibold mb-3">
                 Navigation
@@ -42,7 +38,6 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Features */}
             <div>
               <h3 className="text-white text-sm font-semibold mb-3">
                 Features
@@ -55,7 +50,6 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Legal */}
             <div>
               <h3 className="text-white text-sm font-semibold mb-3">
                 Legal
@@ -70,10 +64,8 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Divider */}
         <div className="border-t border-white/10 my-6"></div>
 
-        {/* Bottom Section */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-3 text-sm text-gray-400">
 
           <p>

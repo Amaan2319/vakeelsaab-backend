@@ -112,7 +112,6 @@ export default function Roadmap() {
       <Navbar />
 
       <div className="max-w-6xl mx-auto px-6 py-20">
-        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -129,7 +128,6 @@ export default function Roadmap() {
           </p>
         </motion.div>
 
-        {/* Roadmap Timeline */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -158,7 +156,6 @@ export default function Roadmap() {
           ))}
         </motion.div>
 
-        {/* CTA Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -176,7 +173,6 @@ export default function Roadmap() {
           </button>
         </motion.div>
 
-        {/* Stats Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -186,7 +182,7 @@ export default function Roadmap() {
           {[
             { number: "10+", label: "Planned Features" },
             { number: "100%", label: "Committed to Excellence" },
-            { number: "∞", label: "Possibilities Ahead" },
+            { number: "Unlimited", label: "Possibilities Ahead" },
           ].map((stat, idx) => (
             <div
               key={idx}

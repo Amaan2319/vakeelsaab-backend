@@ -2,7 +2,6 @@ import { Send, Plus, Paperclip } from "lucide-react";
 import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 
-// Add props interface
 interface ChatInputProps {
   onSend: (query: string) => void;
   disabled?: boolean;
@@ -21,8 +20,8 @@ export default function ChatInput({
 
   const handleSubmit = () => {
     if (!query.trim() || disabled) return;
-    onSend(query); // Call the function passed from Chat.tsx
-    setQuery("");  // Clear the input
+    onSend(query);
+    setQuery("");
   };
 
   const quickPrompts = [
@@ -30,11 +29,6 @@ export default function ChatInput({
     "What is the penalty for cyber fraud?",
     "Difference between IPC and BNS"
   ];
-
-  // ... (Keep your existing themeColors object here)
-  const themeColors = {
-    bg: "#000000", card: "#19191c", border: "#2d2d31", primaryText: "#FFFFFF", secondaryText: "#a1a1aa", accent: "#5664F5",
-  };
 
   return (
     <div className="sticky bottom-0 z-40 -mx-4 border-t border-white/10 bg-black/90 px-4 pb-4 pt-4 backdrop-blur-xl md:-mx-6 md:px-6 md:pb-6">
@@ -57,8 +51,6 @@ export default function ChatInput({
               transition={{ delay: idx * 0.1 }}
               onClick={() => {
                 setQuery(prompt);
-                // Optional: Auto-send when clicking a prompt
-                // onSend(prompt); 
               }}
               disabled={disabled}
               className="whitespace-nowrap flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3.5 py-2 text-[11px] font-medium text-gray-300 transition-all hover:border-indigo-500/50 hover:bg-white/10 hover:text-white disabled:opacity-50"
