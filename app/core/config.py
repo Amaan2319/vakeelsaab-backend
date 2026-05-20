@@ -1,4 +1,5 @@
 from functools import lru_cache
+import json
 from pathlib import Path
 
 from pydantic import Field, field_validator
@@ -47,6 +48,14 @@ class Settings(BaseSettings):
             return value
         if not value:
             return []
+        parsed_value = str(value).strip()
+        if parsed_value.startswith("["):
+            try:
+                loaded = json.loads(parsed_value)
+            except json.JSONDecodeError:
+                loaded = None
+            if isinstance(loaded, list):
+                return [str(origin).strip() for origin in loaded if str(origin).strip()]
         return [origin.strip() for origin in value.split(",") if origin.strip()]
 
     @field_validator("debug", mode="before")

@@ -14,5 +14,10 @@ export default defineConfig({
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
+    
   },
+  server: {
+    allowedHosts: true // 👈 Add this line
+  }
+  
 })
