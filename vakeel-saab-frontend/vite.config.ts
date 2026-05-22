@@ -17,7 +17,7 @@ export default defineConfig({
     
   },
   server: {
-    allowedHosts: true // 👈 Add this line
+    allowedHosts: true 
   }
   
 })

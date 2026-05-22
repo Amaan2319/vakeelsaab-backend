@@ -5,7 +5,7 @@ const USER_STORAGE_KEY = "vakeel-saab.user";
 const TOKEN_STORAGE_KEY = "vakeel-saab.token";
 
 type AuthContextType = {
-  user: AuthUser | null;
+  user: AuthUser | null;z
   token: string | null;
   isAuthenticated: boolean;
   isHydrated: boolean;

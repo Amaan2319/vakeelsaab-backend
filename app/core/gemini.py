@@ -25,7 +25,7 @@ DOCUMENT_SUMMARY_INSTRUCTION = """
 You are Vakeel Saab, an AI legal assistant for Indian law.
 Summarize the legal document in concise bullet points.
 Highlight parties, obligations, deadlines, risks, penalties, and important clauses.
-If the text is incomplete or unclear, say so briefly.
+If the text is incomplete or unclear, say so briefly and in easy words so that normal person can also understand.
 """.strip()
 
 IMAGE_OCR_INSTRUCTION = """
